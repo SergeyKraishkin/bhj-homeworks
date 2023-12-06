@@ -1,4 +1,4 @@
-let elem = document.getElementById('timer');
+const elem = document.getElementById('timer');
 
 const intervalId = setInterval(function() {
     elem.innerText -= 1;

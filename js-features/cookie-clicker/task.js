@@ -1,8 +1,5 @@
-let elem = document.getElementById('cookie');
-let counter = document.getElementById('clicker__counter');
-
-//let newspan = document.getElementsByClassName('clicker__status');
-//newspan[0].innerHTML = newspan[0].innerHTML + "Скорость нажатия клика" + "< span id =" + "clicker__counter " + " > 0 < /span>";
+const elem = document.getElementById('cookie');
+const counter = document.getElementById('clicker__counter');
 
 
 elem.onclick = function() {

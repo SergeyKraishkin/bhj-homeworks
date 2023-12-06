@@ -2,7 +2,7 @@ const dead = document.getElementById('dead');
 const lost = document.getElementById('lost');
 let counterDead = 0;
 let counterLost = 0;
-let allHole = document.querySelectorAll(".hole")
+const allHole = document.querySelectorAll(".hole")
 let notDoubleClick = true;
 
 setInterval(function() {
