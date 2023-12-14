@@ -17,6 +17,11 @@ class Game {
   }
 
   registerEvents() {
+    document.addEventListener('keyup', (elem) => {
+      if (elem.key === 'Control' || elem.key === 'Alt' || elem.key === 'Shift') return;
+      else
+      elem.key === this.currentSymbol.textContent ? this.success() : this.fail();
+      });
     /*
       TODO:
       Написать обработчик события, который откликается
