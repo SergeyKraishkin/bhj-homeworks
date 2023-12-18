@@ -3,7 +3,7 @@ const value = document.querySelector('.dropdown__value');
 value.addEventListener('click',open );
 let listMenu = document.querySelectorAll('.dropdown__item');
 listMenu.forEach((item) =>{
-    item.onclick = close();
+    item.onclick = close;
 });
 
 function open (){
