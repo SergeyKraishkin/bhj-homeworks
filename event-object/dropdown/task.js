@@ -1,14 +1,16 @@
 
 const value = document.querySelector('.dropdown__value');
-value.addEventListener('click',open );
+value.addEventListener('click', open );
 let listMenu = document.querySelectorAll('.dropdown__item');
-listMenu.forEach((item) =>{
+listMenu.forEach((item) => {
     item.onclick = close;
 });
 
-function open (){
+function open (e){
+    e.preventDefault();
     document.querySelector('.dropdown__list').classList.add('dropdown__list_active')  
 }
-function close (){
+function close (e){
+    e.preventDefault();
     document.querySelector('.dropdown__list').classList.remove('dropdown__list_active')  
 }
