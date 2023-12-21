@@ -1,6 +1,15 @@
 
 const value = document.querySelector('.dropdown__value');
-value.addEventListener('click', open );
+value.addEventListener('click', function (e){
+    e.preventDefault();
+    if (document.querySelector('.dropdown__list').classList.contains('dropdown__list_active'))  {
+    close(e);
+    }
+    else {
+        open(e);
+    }
+}
+    );
 let listMenu = document.querySelectorAll('.dropdown__item');
 listMenu.forEach((item) => {
     item.onclick = close;
