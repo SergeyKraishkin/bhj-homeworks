@@ -30,20 +30,13 @@ productAddToCart.forEach((item) => {
         if (productInCartList.length === 0) {
             addNewProduct= true;
         }
-        else {   // volume exist or not and add it or add new product
-          /*  productInCartList.forEach((item) => {
-                if (item.id === productId) { //add volume
-                    console.log ('the same product is found');
-                    item.children[1].innerText = Number(item.children[1].innerText) + Number(qty);
-                    addNewProduct= false;
-                }
-                else addNewProduct= true;
-            });
-            */
-           debugger;
-           let productIdInCart = [...productInCartList];
-           if  (productInCartList === productId) {
-                    productInCartList.children[1].innerText = Number(productInCartList.children[1].innerText) + Number(qty);
+        else {
+           let productInInCart = [...productInCartList].find( function (element) {
+            return element.id === productId;
+           });
+
+           if  (productInInCart) {
+            productInInCart.children[1].innerText = Number(productInInCart.children[1].innerText) + Number(qty);
                     addNewProduct= false;
                 }
                 else {
